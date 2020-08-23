@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket.io</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">  
+    <style>
+        #chat-box{
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            width: 500px;
+            height: 500px;
+        }
+        div.messages{
+            background-color: white;
+            width: 500px;
+            height: 433px;
+            overflow: auto;
+            position: relative;
+            top: 0;
+            padding: 0;
+            margin: 0;
+            color: black;
+            font-size: 14px;
+            font-family: 'Source Sans Pro', sans-serif;
+
+        }
+        .button{
+            width: 500px;
+            height: 35px;
+            background-color:blue;
+            font-family: 'Fredoka One', cursive;
+            color: white;
+            border: 0;
+            cursor: pointer;
+        }
+        input{
+            width: 498px;
+            height: 30px;
+            border: 0;
+        }
+        .input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            font-family: 'Fredoka One', cursive;
+        }
+        .input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            font-family: 'Fredoka One', cursive;
+        }
+        .input::-ms-input-placeholder { /* Microsoft Edge */
+            font-family: 'Fredoka One', cursive;
+        }
+        div.messages::-webkit-scrollbar { /* Hide scrollbar for Chrome, Safari and Opera */
+            display: none;
+        }
+        div.messages { /* Hide scrollbar for IE, Edge and Firefox */
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        strong{
+            color: blue;
+        }
+        #feedback{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="chat-box">
+        <div id="op" class="messages"></div>
+        <div id="handle-send">
+            <input id="handle" class="input" type="text" name="handle" placeholder="Type your handle..."></input><br>
+            <input id="message" class="input" type="text" name="message" placeholder="Type a message..."></input><br>
+            <button id="send" class="button">Send</button>
+        </div>
+    </div>
+    <script src="/chat.js"></script>
+</body>
+</html>
