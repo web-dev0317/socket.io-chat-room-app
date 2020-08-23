@@ -1,4 +1,4 @@
-const socket = io('http://localhost:8080');
+const socket = io('https://socket-io-chat-room-app-node.herokuapp.com/');
 const op = document.getElementById("op");
 const handle = document.getElementById("handle");
 const message = document.getElementById("message");
